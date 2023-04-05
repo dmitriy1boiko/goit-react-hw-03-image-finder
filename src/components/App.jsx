@@ -1,12 +1,11 @@
-
-import { Component } from "react";
-import { AppSection } from "./App.styled";
-import ImageGallery from "./ImageGallery/ImageGallery";
-import Searchbar from "./Searchbar/Searchbar"
+import { Component } from 'react';
+import { AppSection } from './App.styled';
+import ImageGallery from './ImageGallery/ImageGallery';
+import Searchbar from './Searchbar/Searchbar';
 
 export class App extends Component {
   state = {
-    query:'',
+    query: '',
   };
 
   changeQuery = query => {
@@ -15,10 +14,10 @@ export class App extends Component {
 
   render() {
     return (
-      <AppSection >
-        <Searchbar onSubmit={this.changeQuery}/>
-        <ImageGallery query={this.state.query}/>
+      <AppSection>
+        <Searchbar onSubmit={this.changeQuery} />
+        <ImageGallery query={this.state.query} />
       </AppSection>
     );
   }
-};
+}
